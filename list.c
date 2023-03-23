@@ -38,8 +38,9 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+  if (list->head == NULL) return NULL;
   list->current = list->head;
-  return 2/*list->head*/;
+  return list->head;
 }
 
 void * nextList(List * list) {
